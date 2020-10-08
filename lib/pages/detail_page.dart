@@ -14,7 +14,13 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Center(
-        child:Text('name:${widget.name} age:${widget.age}'),
+        child:FlatButton(
+          onPressed:(){
+            Navigator.of(context).pop({'data1':widget.name,'data2':"${widget.age}"});
+          },
+          color:Colors.blue,
+          child:Text('ButtonBack'),
+        ),
       ),
     );
   }
