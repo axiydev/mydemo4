@@ -10,12 +10,13 @@ class _HomePageState extends State<HomePage> {
   Future _openDetail() async{
    Map result = await Navigator.of(context).push(new MaterialPageRoute(
         builder:(BuildContext context){
-      return new DetailPage(name:"Flutter",age:22);
+      return new DetailPage(name:"Dart",age:33);
     }
     ));
    if(result!=null && result.containsKey('data1')&&result.containsKey('data2')){
      setState((){
        data1=result['data1'];
+       data2=result['data2'];
      });
    }else{print("nothing");}
   }

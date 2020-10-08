@@ -16,7 +16,7 @@ class _DetailPageState extends State<DetailPage> {
       body:Center(
         child:FlatButton(
           onPressed:(){
-            Navigator.of(context).pop({'data1':widget.name,'data2':"${widget.age}"});
+            Navigator.of(context).pop({'data1':"name:${widget.name}",'data2':"age:${widget.age}"});
           },
           color:Colors.blue,
           child:Text('ButtonBack'),
